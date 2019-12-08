@@ -1,3 +1,9 @@
+import sys
+import csv
+from datetime import datetime
+from os.path import isfile, abspath
+from django.core.management.base import BaseCommand, CommandError
+
 from squirrel import models
 
 
@@ -33,11 +39,16 @@ class Command(BaseCommand):
 
             for row in dataset:
 
+                cur = cur + 1
+
                 if is_first_line:
                     is_first_line = False
                     continue
 
-                cur = cur + 1
+                if models.Sighting.objects.filter(uniqueSquirrelId=row[2]).exists():
+                    print('duplicated row has been skipped')
+                    continue
+
                 models.Sighting.objects.create(x=row[0], y=row[1], uniqueSquirrelId=row[2], hectare=row[3],
                                                shift=row[4],
                                                date=format_date(row[5]),
