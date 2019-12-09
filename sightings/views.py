@@ -76,13 +76,6 @@ def stat_sighting(request):
                     for x in Sighting.objects.values('hectare').annotate(count=Count('hectare'))
                 ]
             ),
-            (
-                'Distribution of hectares',
-                [
-                    [x['hectare'], x['count']]
-                    for x in Sighting.objects.values('hectare').annotate(count=Count('hectare'))
-                ]
-            )
         ]
     })
 
