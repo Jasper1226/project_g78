@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<a href="sightings/add">Add</a>
+<a href="add">Add</a>
 
 <table border="1" cellpadding="8">
     <tbody>
@@ -73,7 +73,7 @@
             <td>{{ sighting.runs_from }}</td>
             <td>{{ sighting.date }}</td>
             <td>{{ sighting.shift }}</td>
-            <td><a href="sightings/{{ sighting.unique_squirrel_id }}">Edit</a></td>
+            <td><a href="{{ sighting.unique_squirrel_id }}">Edit</a></td>
         </tr>
     {% endfor %}
     </tbody>

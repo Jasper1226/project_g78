@@ -38,7 +38,7 @@ class SightingForm(forms.ModelForm):
     runs_form = forms.BooleanField(required=False, label='Runs From', initial=False)
 
     field_order = [
-        'unique_squirrel_id', 'latitude', 'longitude', 'date', 'shift', 'age', 'primary_fur_color', 'location', 'specific_location',
+        'latitude', 'longitude', 'unique_squirrel_id', 'date', 'shift', 'age', 'primary_fur_color', 'location', 'specific_location',
         'running', 'chasing', 'climbing', 'eating', 'foraging', 'other_activities', 'kuks', 'quaas', 'moans',
         'tail_flags', 'tail_twitches', 'approaches', 'indifferent', 'runs_form',
     ]

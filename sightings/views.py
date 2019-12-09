@@ -21,6 +21,7 @@ def edit_sighting(request, unique_squirrel_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Your changes has been applied')
+            return redirect('/sightings/')
         else:
             messages.error(request, form.errors)
 
@@ -40,8 +41,8 @@ def add_sighting(request):
 
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your changes was applied')
             return redirect('/sightings/%s' % form.instance.unique_squirrel_id)
+            messages.success(request, 'Your changes was applied')
         else:
             messages.error(request, form.errors)
 
