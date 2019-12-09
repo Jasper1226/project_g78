@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sighting - List</title>
+
+    <style>
+        th, td {
+            white-space: nowrap;
+        }
+    </style>
+
+</head>
+<body>
+
+<a href="sightings/add">Add</a>
+
+<table border="1" cellpadding="8">
+    <tbody>
+    <tr>
+        <th>Unique Squirrel ID</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Age</th>
+        <th>Primary Fur Color</th>
+        <th>Highlight Fur Color</th>
+        <th>Location</th>
+        <th>Specific Location</th>
+        <th>Running</th>
+        <th>Chasing</th>
+        <th>Climbing</th>
+        <th>Eating</th>
+        <th>Foraging</th>
+        <th>Other Activities</th>
+        <th>Kuks</th>
+        <th>Quaas</th>
+        <th>Moans</th>
+        <th>Tail Flags</th>
+        <th>Tail Twitches</th>
+        <th>Approaches</th>
+        <th>Indifferent</th>
+        <th>Runs From</th>
+        <th>Date</th>
+        <th>Shift</th>
+        <th>Action</th>
+    </tr>
+    {% for sighting in sightings %}
+        <tr>
+            <td>{{ sighting.unique_squirrel_id }}</td>
+            <td>{{ sighting.latitude }}</td>
+            <td>{{ sighting.longitude }}</td>
+            <td>{{ sighting.age }}</td>
+            <td>{{ sighting.primary_fur_color }}</td>
+            <td>{{ sighting.highlight_fur_color }}</td>
+            <td>{{ sighting.location }}</td>
+            <td>{{ sighting.specific_location }}</td>
+            <td>{{ sighting.running }}</td>
+            <td>{{ sighting.chasing }}</td>
+            <td>{{ sighting.climbing }}</td>
+            <td>{{ sighting.eating }}</td>
+            <td>{{ sighting.foraging }}</td>
+            <td>{{ sighting.other_activities }}</td>
+            <td>{{ sighting.kuks }}</td>
+            <td>{{ sighting.quaas }}</td>
+            <td>{{ sighting.moans }}</td>
+            <td>{{ sighting.tail_flags }}</td>
+            <td>{{ sighting.tail_twitches }}</td>
+            <td>{{ sighting.approaches }}</td>
+            <td>{{ sighting.indifferent }}</td>
+            <td>{{ sighting.runs_from }}</td>
+            <td>{{ sighting.date }}</td>
+            <td>{{ sighting.shift }}</td>
+            <td><a href="sightings/{{ sighting.unique_squirrel_id }}">Edit</a></td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
