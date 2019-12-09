@@ -1,5 +1,5 @@
 # Squirrel-Tracker
-Project Description: A Django application that can import the 2018 Central Park Squirrel Census data and allow adding, updating, and deleting squirrel data.
+Project Description: A Django application that can import the 2018 Central Park Squirrel Census data and allow adding and updating squirrel data.
 
 Views Description:
 (1) map/: Locate 100 squirrels on the central park;
