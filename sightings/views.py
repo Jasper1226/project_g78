@@ -56,6 +56,7 @@ def stat_sighting(request):
         'indicators': [
             ('Number of records', Sighting.objects.count()),
             ('Number of adult squirrels', Sighting.objects.filter(age='ADULT').count()),
+            ('Number of shift in PM', Sighting.objects.filter(shift='PM').count()),
             (
                 'Distribution of primary fur color',
                 [
