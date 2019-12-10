@@ -1,3 +1,5 @@
 *.pyc
 *.DS_Store
 __pycache__
+map/__pycache__/views.cpython-36.pyc
+sightings/__pycache__/views.cpython-36.pyc
