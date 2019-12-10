@@ -12,4 +12,4 @@ Group 78, Section 2
 
 UNIs:[jx1226, xl2918]
 
-A link to the server running the application:
+A link to the server running the application: https://sharp-respect-255500.appspot.com/
